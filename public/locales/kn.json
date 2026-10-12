@@ -1,0 +1,171 @@
+{
+  "add": "ಸೇರಿಸು",
+  "address": {
+    "addNew": "ಹೊಸ ವಿಳಾಸ",
+    "chooseAddress": "ವಿಳಾಸವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "deliveryAddress": "ಡೆಲಿವರಿ ವಿಳಾಸ",
+    "labels": {
+      "addressLine1": "ವಿಳಾಸ ಸಾಲು 1",
+      "addressLine2": "ವಿಳಾಸ ಸಾಲು 2",
+      "addressType": "ವಿಳಾಸ ಪ್ರಕಾರ",
+      "city": "ನಗರ",
+      "defaultAddress": "ಡೀಫಾಲ್ಟ್ ಆಗಿ ಹೊಂದಿಸು",
+      "landmark": "ಹೆಗ್ಗುರುತು",
+      "mobile": "ಮೊಬೈಲ್ ಸಂಖ್ಯೆ",
+      "state": "ರಾಜ್ಯ",
+      "zipcode": "ಪಿನ್ ಕೋಡ್"
+    },
+    "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+    "noAddresses": "ವಿಳಾಸಗಳಿಲ್ಲ",
+    "noSelected": "ವಿಳಾಸ ಆಯ್ಕೆಯಾಗಿಲ್ಲ",
+    "pleaseAddFirst": "ಮೊದಲು ಒಂದು ವಿಳಾಸವನ್ನು ಸೇರಿಸಿ",
+    "selectAddress": "ವಿಳಾಸವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "toast": {
+      "error": "ಏನೋ ತಪ್ಪಾಗಿದೆ"
+    },
+    "unexpected_error_description": "ಅನಿರೀಕ್ಷಿತ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ನಂತರ ಪ್ರಯತ್ನಿಸಿ.",
+    "unexpected_error_title": "ಅನಿರೀಕ್ಷಿತ ದೋಷ",
+    "update": "ವಿಳಾಸವನ್ನು ನವೀಕರಿಸು"
+  },
+  "addressSelection": {
+    "empty": {
+      "button": "ನಿಮ್ಮ ಮೊದಲ ವಿಳಾಸವನ್ನು ಸೇರಿಸಿ",
+      "failed": "ವಿಳಾಸಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+      "noAddresses": "ವಿಳಾಸಗಳಿಲ್ಲ. ಮುಂದುವರಿಯಲು ನಿಮ್ಮ ಮೊದಲ ವಿಳಾಸವನ್ನು ಸೇರಿಸಿ."
+    },
+    "footer": {
+      "confirm": "ಆಯ್ಕೆಯನ್ನು ದೃಢೀಕರಿಸು"
+    }
+  },
+  "amount": "ಮೊತ್ತ",
+  "apply": "ಅನ್ವಯಿಸು",
+  "brand": {
+    "loading": "ಬ್ರಾಂಡ್‌ಗಳು ಲೋಡ್ ಆಗುತ್ತಿವೆ..."
+  },
+  "cancel": "ರದ್ದು",
+  "categories": "ವರ್ಗಗಳು",
+  "category": {
+    "loading": "ವರ್ಗಗಳು ಲೋಡ್ ಆಗುತ್ತಿವೆ..."
+  },
+  "checkout": {
+    "stores": "ಅಂಗಡಿಗಳು"
+  },
+  "close": "ಮುಚ್ಚು",
+  "common": {
+    "cancel": "ರದ್ದು"
+  },
+  "continue": "ಮುಂದುವರಿಸು",
+  "delete": "ಅಳಿಸು",
+  "delivery": "ಡೆಲಿವರಿ",
+  "edit": "ಸಂಪಾದಿಸು",
+  "failedItems": {
+    "store": "ಅಂಗಡಿ"
+  },
+  "filters": {
+    "status": "ಸ್ಥಿತಿ"
+  },
+  "footer": {
+    "quick_links": {
+      "stores": "ಅಂಗಡಿಗಳು"
+    }
+  },
+  "home": {
+    "delivery": {
+      "features": {
+        "tracking": "ನೈಜ-ಸಮಯ ಟ್ರ್ಯಾಕಿಂಗ್"
+      }
+    }
+  },
+  "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+  "nav": {
+    "home": "ಮುಖಪುಟ",
+    "products": "ಉತ್ಪನ್ನಗಳು",
+    "watch": "ವೀಕ್ಷಿಸಿ",
+    "watch_and_buy": "ವೀಕ್ಷಿಸಿ ಮತ್ತು ಖರೀದಿಸಿ"
+  },
+  "no": "ಇಲ್ಲ",
+  "order": "ಆರ್ಡರ್",
+  "pageTitle": {
+    "cart": "ಕಾರ್ಟ್",
+    "categories": "ವರ್ಗಗಳು",
+    "home": "ಮುಖಪುಟ",
+    "orders": "ಆರ್ಡರ್‌ಗಳು",
+    "products": "ಉತ್ಪನ್ನಗಳು",
+    "search": "ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳು",
+    "stores": "ಅಂಗಡಿಗಳು",
+    "wallet": "ವಾಲೆಟ್",
+    "play": "ಪ್ಲೇ"
+  },
+  "pages": {
+    "featureSection": {
+      "products": "ಉತ್ಪನ್ನಗಳು"
+    },
+    "order": {
+      "loading": "ಆರ್ಡರ್ ವಿವರಗಳು ಲೋಡ್ ಆಗುತ್ತಿವೆ..."
+    },
+    "ordersPage": {
+      "loading": "ನಿಮ್ಮ ಆರ್ಡರ್‌ಗಳು ಲೋಡ್ ಆಗುತ್ತಿವೆ..."
+    },
+    "referAndEarnPage": {
+      "stats": {
+        "pending": "ಬಾಕಿ ಇದೆ"
+      }
+    },
+    "storeProductsPage": {
+      "breadcrumbs": {
+        "store": "ಅಂಗಡಿ",
+        "stores": "ಅಂಗಡಿಗಳು"
+      },
+      "reels": {
+        "title": "ರೀಲ್ಸ್"
+      }
+    },
+    "play": {
+      "storiesTitle": "ವೀಕ್ಷಿಸಿ ಮತ್ತು ಖರೀದಿಸಿ"
+    }
+  },
+  "payment": "ಪಾವತಿ",
+  "pending": "ಬಾಕಿ ಇದೆ",
+  "price": "ಬೆಲೆ",
+  "product_modal": {
+    "cancel": "ರದ್ದು",
+    "continue": "ಮುಂದುವರಿಸು"
+  },
+  "products": "ಉತ್ಪನ್ನಗಳು",
+  "profile": "ಪ್ರೊಫೈಲ್",
+  "profileBtn": {
+    "logout": "ಲಾಗ್ ಔಟ್",
+    "wallet": "ವಾಲೆಟ್"
+  },
+  "quantity": "ಪ್ರಮಾಣ:",
+  "register_modal": {
+    "links": {
+      "login": "ಲಾಗಿನ್"
+    }
+  },
+  "remove": "ತೆಗೆದುಹಾಕು",
+  "removedItems": {
+    "close": "ಮುಚ್ಚು",
+    "store": "ಅಂಗಡಿ"
+  },
+  "return": "ರಿಟರ್ನ್",
+  "save": "ಉಳಿಸು",
+  "schedule": {
+    "confirm": "ದೃಢೀಕರಿಸು"
+  },
+  "search": "ಹುಡುಕಿ...",
+  "status": "ಸ್ಥಿತಿ",
+  "statusFilters": {
+    "cancelled": "ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ",
+    "delivered": "ಡೆಲಿವರಿ ಆಗಿದೆ"
+  },
+  "stories": {
+    "title": "ಸ್ಟೋರಿಗಳು"
+  },
+  "reels": {
+    "label": "ರೀಲ್ಸ್",
+    "viewer": {
+      "viewProduct": "ಉತ್ಪನ್ನ ವೀಕ್ಷಿಸಿ"
+    }
+  }
+}

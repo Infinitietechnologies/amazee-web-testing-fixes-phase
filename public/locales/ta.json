@@ -1,0 +1,200 @@
+{
+  "add": "சேர்",
+  "address": {
+    "addNew": "புதிய முகவரி",
+    "chooseAddress": "முகவரியைத் தேர்ந்தெடுக்கவும்",
+    "deliveryAddress": "டெலிவரி முகவரி",
+    "labels": {
+      "addressLine1": "முகவரி வரி 1",
+      "addressLine2": "முகவரி வரி 2",
+      "addressType": "முகவரி வகை",
+      "city": "நகரம்",
+      "defaultAddress": "இயல்புநிலையாக அமை",
+      "landmark": "அடையாளம்",
+      "mobile": "மொபைல் எண்",
+      "state": "மாநிலம்",
+      "zipcode": "பின் கோடு"
+    },
+    "loading": "ஏற்றுகிறது...",
+    "noAddresses": "முகவரிகள் இல்லை",
+    "noSelected": "முகவரி தேர்ந்தெடுக்கப்படவில்லை",
+    "pleaseAddFirst": "முதலில் ஒரு முகவரியைச் சேர்க்கவும்",
+    "selectAddress": "முகவரியைத் தேர்ந்தெடுக்கவும்",
+    "toast": {
+      "error": "ஏதோ தவறு நடந்துவிட்டது"
+    },
+    "unexpected_error_description": "எதிர்பாராத பிழை ஏற்பட்டது. பிறகு முயற்சிக்கவும்.",
+    "unexpected_error_title": "எதிர்பாராத பிழை",
+    "update": "முகவரியைப் புதுப்பி"
+  },
+  "addressSelection": {
+    "empty": {
+      "button": "உங்கள் முதல் முகவரியைச் சேர்க்கவும்",
+      "failed": "முகவரிகளை ஏற்ற முடியவில்லை. மீண்டும் முயற்சிக்கவும்.",
+      "noAddresses": "முகவரிகள் இல்லை. தொடர முதல் முகவரியைச் சேர்க்கவும்."
+    },
+    "footer": {
+      "confirm": "தேர்வை உறுதிப்படுத்து"
+    }
+  },
+  "amount": "தொகை",
+  "apply": "பயன்படுத்து",
+  "brand": {
+    "loading": "பிராண்டுகள் ஏற்றப்படுகின்றன..."
+  },
+  "cancel": "ரத்து",
+  "categories": "வகைகள்",
+  "category": {
+    "loading": "வகைகள் ஏற்றப்படுகின்றன..."
+  },
+  "checkout": {
+    "stores": "கடைகள்"
+  },
+  "close": "மூடு",
+  "common": {
+    "cancel": "ரத்து"
+  },
+  "continue": "தொடரவும்",
+  "delete": "நீக்கு",
+  "delivery": "டெலிவரி",
+  "edit": "திருத்து",
+  "failedItems": {
+    "store": "கடை"
+  },
+  "filters": {
+    "status": "நிலை"
+  },
+  "footer": {
+    "quick_links": {
+      "stores": "கடைகள்"
+    }
+  },
+  "home": {
+    "delivery": {
+      "features": {
+        "tracking": "நேரலை டிராக்கிங்"
+      }
+    },
+    "buy_again": {
+      "title": "மீண்டும் வாங்க",
+      "description": "உங்கள் முந்தைய ஆர்டர்கள், இப்போது அருகில் கிடைக்கின்றன"
+    }
+  },
+  "loading": "ஏற்றுகிறது...",
+  "nav": {
+    "home": "முகப்பு",
+    "products": "பொருட்கள்",
+    "watch": "பார்",
+    "watch_and_buy": "பார்த்து வாங்கு"
+  },
+  "no": "இல்லை",
+  "order": "ஆர்டர்",
+  "pageTitle": {
+    "cart": "கார்ட்",
+    "categories": "வகைகள்",
+    "home": "முகப்பு",
+    "orders": "ஆர்டர்கள்",
+    "products": "பொருட்கள்",
+    "search": "தேடல் முடிவுகள்",
+    "stores": "கடைகள்",
+    "wallet": "வாலட்",
+    "play": "ப்ளே"
+  },
+  "pages": {
+    "featureSection": {
+      "products": "பொருட்கள்"
+    },
+    "order": {
+      "loading": "ஆர்டர் விவரங்கள் ஏற்றப்படுகின்றன..."
+    },
+    "ordersPage": {
+      "loading": "உங்கள் ஆர்டர்கள் ஏற்றப்படுகின்றன..."
+    },
+    "referAndEarnPage": {
+      "stats": {
+        "pending": "நிலுவையில்"
+      }
+    },
+    "storeProductsPage": {
+      "breadcrumbs": {
+        "store": "கடை",
+        "stores": "கடைகள்"
+      },
+      "reels": {
+        "title": "ரீல்ஸ்"
+      }
+    },
+    "play": {
+      "storiesTitle": "பார்த்து வாங்கு"
+    }
+  },
+  "payment": "கட்டணம்",
+  "pending": "நிலுவையில்",
+  "price": "விலை",
+  "product_modal": {
+    "cancel": "ரத்து",
+    "continue": "தொடரவும்"
+  },
+  "products": "பொருட்கள்",
+  "profile": "சுயவிவரம்",
+  "profileBtn": {
+    "logout": "வெளியேறு",
+    "wallet": "வாலட்"
+  },
+  "quantity": "அளவு:",
+  "register_modal": {
+    "links": {
+      "login": "உள்நுழை"
+    }
+  },
+  "remove": "அகற்று",
+  "removedItems": {
+    "close": "மூடு",
+    "store": "கடை"
+  },
+  "return": "ரிட்டர்ன்",
+  "save": "சேமி",
+  "schedule": {
+    "confirm": "உறுதிப்படுத்து"
+  },
+  "search": "தேடு...",
+  "status": "நிலை",
+  "statusFilters": {
+    "cancelled": "ரத்து செய்யப்பட்டது",
+    "delivered": "டெலிவரி ஆனது"
+  },
+  "stories": {
+    "title": "ஸ்டோரிகள்"
+  },
+  "reels": {
+    "label": "ரீல்ஸ்",
+    "viewer": {
+      "viewProduct": "பொருளைக் காண்க"
+    }
+  },
+  "cart_bar": {
+    "items_one": "{{count}} பொருள்",
+    "items_other": "{{count}} பொருட்கள்",
+    "view_cart": "கார்ட்டைப் பார்க்க"
+  },
+  "offers": {
+    "title": "சலுகைகள்",
+    "subtitle": "உங்கள் அருகில் உள்ள சலுகைகளும் தள்ளுபடிகளும்",
+    "all": "அனைத்து சலுகைகள்",
+    "bogoGroup": "அதிகம் வாங்க, குறைவாகச் செலுத்த",
+    "discountGroup": "தள்ளுபடி பொருட்கள்",
+    "empty": "இப்போது உங்கள் அருகில் சலுகைகள் இல்லை.",
+    "locationNeeded": "சலுகைகளைப் பார்க்க உங்கள் இடத்தைத் தேர்வு செய்யவும்."
+  },
+  "cart": {
+    "outOfZoneTitle": "எங்கள் லாஜிஸ்டிக்ஸ் நெட்வொர்க் மூலம் டெலிவரி",
+    "outOfZoneDescription": "உங்கள் இடம் எங்கள் டெலிவரி மண்டலங்களுக்கு வெளியே உள்ளது. ஆர்டர்கள் சுமார் {{days}} நாட்களில் டெலிவரி செய்யப்படும்; எக்ஸ்பிரஸ் மற்றும் திட்டமிடப்பட்ட ஸ்லாட்டுகள் இல்லை.",
+    "outOfZoneNoCod": "இந்த ஆர்டர்களுக்கு கேஷ் ஆன் டெலிவரி இல்லை."
+  },
+  "delivery_in_days_one": "{{count}} நாள்",
+  "delivery_in_days_other": "{{count}} நாட்கள்",
+  "locationSelector": {
+    "deliveryOutOfZone": "எங்கள் லாஜிஸ்டிக்ஸ் நெட்வொர்க் மூலம் டெலிவரி",
+    "deliveryOutOfZoneDescription": "டெலிவரி மண்டலங்களுக்கு வெளியே — சுமார் {{days}} நாட்களில் டெலிவரி"
+  }
+}

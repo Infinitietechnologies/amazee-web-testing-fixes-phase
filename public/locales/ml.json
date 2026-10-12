@@ -1,0 +1,171 @@
+{
+  "add": "ചേർക്കുക",
+  "address": {
+    "addNew": "പുതിയ വിലാസം",
+    "chooseAddress": "വിലാസം തിരഞ്ഞെടുക്കുക",
+    "deliveryAddress": "ഡെലിവറി വിലാസം",
+    "labels": {
+      "addressLine1": "വിലാസം വരി 1",
+      "addressLine2": "വിലാസം വരി 2",
+      "addressType": "വിലാസ തരം",
+      "city": "നഗരം",
+      "defaultAddress": "ഡിഫോൾട്ടായി സജ്ജമാക്കുക",
+      "landmark": "ലാൻഡ്‌മാർക്ക്",
+      "mobile": "മൊബൈൽ നമ്പർ",
+      "state": "സംസ്ഥാനം",
+      "zipcode": "പിൻ കോഡ്"
+    },
+    "loading": "ലോഡുചെയ്യുന്നു...",
+    "noAddresses": "വിലാസങ്ങളൊന്നുമില്ല",
+    "noSelected": "വിലാസം തിരഞ്ഞെടുത്തിട്ടില്ല",
+    "pleaseAddFirst": "ആദ്യം ഒരു വിലാസം ചേർക്കുക",
+    "selectAddress": "വിലാസം തിരഞ്ഞെടുക്കുക",
+    "toast": {
+      "error": "എന്തോ കുഴപ്പം സംഭവിച്ചു"
+    },
+    "unexpected_error_description": "അപ്രതീക്ഷിത പിശക് സംഭവിച്ചു. ദയവായി പിന്നീട് ശ്രമിക്കുക.",
+    "unexpected_error_title": "അപ്രതീക്ഷിത പിശക്",
+    "update": "വിലാസം അപ്ഡേറ്റ് ചെയ്യുക"
+  },
+  "addressSelection": {
+    "empty": {
+      "button": "നിങ്ങളുടെ ആദ്യ വിലാസം ചേർക്കുക",
+      "failed": "വിലാസങ്ങൾ ലോഡുചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കുക.",
+      "noAddresses": "വിലാസങ്ങളൊന്നുമില്ല. തുടരാൻ നിങ്ങളുടെ ആദ്യ വിലാസം ചേർക്കുക."
+    },
+    "footer": {
+      "confirm": "തിരഞ്ഞെടുപ്പ് സ്ഥിരീകരിക്കുക"
+    }
+  },
+  "amount": "തുക",
+  "apply": "പ്രയോഗിക്കുക",
+  "brand": {
+    "loading": "ബ്രാൻഡുകൾ ലോഡുചെയ്യുന്നു..."
+  },
+  "cancel": "റദ്ദാക്കുക",
+  "categories": "വിഭാഗങ്ങൾ",
+  "category": {
+    "loading": "വിഭാഗങ്ങൾ ലോഡുചെയ്യുന്നു..."
+  },
+  "checkout": {
+    "stores": "സ്റ്റോറുകൾ"
+  },
+  "close": "അടയ്ക്കുക",
+  "common": {
+    "cancel": "റദ്ദാക്കുക"
+  },
+  "continue": "തുടരുക",
+  "delete": "ഇല്ലാതാക്കുക",
+  "delivery": "ഡെലിവറി",
+  "edit": "എഡിറ്റ്",
+  "failedItems": {
+    "store": "സ്റ്റോർ"
+  },
+  "filters": {
+    "status": "നില"
+  },
+  "footer": {
+    "quick_links": {
+      "stores": "സ്റ്റോറുകൾ"
+    }
+  },
+  "home": {
+    "delivery": {
+      "features": {
+        "tracking": "തത്സമയ ട്രാക്കിംഗ്"
+      }
+    }
+  },
+  "loading": "ലോഡുചെയ്യുന്നു...",
+  "nav": {
+    "home": "ഹോം",
+    "products": "ഉൽപ്പന്നങ്ങൾ",
+    "watch": "കാണുക",
+    "watch_and_buy": "കണ്ട് വാങ്ങൂ"
+  },
+  "no": "ഇല്ല",
+  "order": "ഓർഡർ",
+  "pageTitle": {
+    "cart": "കാർട്ട്",
+    "categories": "വിഭാഗങ്ങൾ",
+    "home": "ഹോം",
+    "orders": "ഓർഡറുകൾ",
+    "products": "ഉൽപ്പന്നങ്ങൾ",
+    "search": "തിരയൽ ഫലങ്ങൾ",
+    "stores": "സ്റ്റോറുകൾ",
+    "wallet": "വാലറ്റ്",
+    "play": "പ്ലേ"
+  },
+  "pages": {
+    "featureSection": {
+      "products": "ഉൽപ്പന്നങ്ങൾ"
+    },
+    "order": {
+      "loading": "ഓർഡർ വിവരങ്ങൾ ലോഡുചെയ്യുന്നു..."
+    },
+    "ordersPage": {
+      "loading": "നിങ്ങളുടെ ഓർഡറുകൾ ലോഡുചെയ്യുന്നു..."
+    },
+    "referAndEarnPage": {
+      "stats": {
+        "pending": "തീർപ്പാക്കാത്തത്"
+      }
+    },
+    "storeProductsPage": {
+      "breadcrumbs": {
+        "store": "സ്റ്റോർ",
+        "stores": "സ്റ്റോറുകൾ"
+      },
+      "reels": {
+        "title": "റീൽസ്"
+      }
+    },
+    "play": {
+      "storiesTitle": "കണ്ട് വാങ്ങൂ"
+    }
+  },
+  "payment": "പേയ്‌മെന്റ്",
+  "pending": "തീർപ്പാക്കാത്തത്",
+  "price": "വില",
+  "product_modal": {
+    "cancel": "റദ്ദാക്കുക",
+    "continue": "തുടരുക"
+  },
+  "products": "ഉൽപ്പന്നങ്ങൾ",
+  "profile": "പ്രൊഫൈൽ",
+  "profileBtn": {
+    "logout": "ലോഗ് ഔട്ട്",
+    "wallet": "വാലറ്റ്"
+  },
+  "quantity": "അളവ്:",
+  "register_modal": {
+    "links": {
+      "login": "ലോഗിൻ"
+    }
+  },
+  "remove": "നീക്കം ചെയ്യുക",
+  "removedItems": {
+    "close": "അടയ്ക്കുക",
+    "store": "സ്റ്റോർ"
+  },
+  "return": "റിട്ടേൺ",
+  "save": "സേവ്",
+  "schedule": {
+    "confirm": "സ്ഥിരീകരിക്കുക"
+  },
+  "search": "തിരയുക...",
+  "status": "നില",
+  "statusFilters": {
+    "cancelled": "റദ്ദാക്കി",
+    "delivered": "ഡെലിവർ ചെയ്തു"
+  },
+  "stories": {
+    "title": "സ്റ്റോറികൾ"
+  },
+  "reels": {
+    "label": "റീൽസ്",
+    "viewer": {
+      "viewProduct": "ഉൽപ്പന്നം കാണുക"
+    }
+  }
+}

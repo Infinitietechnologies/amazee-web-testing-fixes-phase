@@ -1,0 +1,171 @@
+{
+  "add": "జోడించు",
+  "address": {
+    "addNew": "కొత్త చిరునామా",
+    "chooseAddress": "చిరునామాను ఎంచుకోండి",
+    "deliveryAddress": "డెలివరీ చిరునామా",
+    "labels": {
+      "addressLine1": "చిరునామా లైన్ 1",
+      "addressLine2": "చిరునామా లైన్ 2",
+      "addressType": "చిరునామా రకం",
+      "city": "నగరం",
+      "defaultAddress": "డిఫాల్ట్‌గా సెట్ చేయి",
+      "landmark": "ల్యాండ్‌మార్క్",
+      "mobile": "మొబైల్ నంబర్",
+      "state": "రాష్ట్రం",
+      "zipcode": "పిన్ కోడ్"
+    },
+    "loading": "లోడ్ అవుతోంది...",
+    "noAddresses": "చిరునామాలు లేవు",
+    "noSelected": "చిరునామా ఎంచుకోలేదు",
+    "pleaseAddFirst": "ముందుగా ఒక చిరునామాను జోడించండి",
+    "selectAddress": "చిరునామాను ఎంచుకోండి",
+    "toast": {
+      "error": "ఏదో తప్పు జరిగింది"
+    },
+    "unexpected_error_description": "ఊహించని లోపం సంభవించింది. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.",
+    "unexpected_error_title": "ఊహించని లోపం",
+    "update": "చిరునామాను నవీకరించు"
+  },
+  "addressSelection": {
+    "empty": {
+      "button": "మీ మొదటి చిరునామాను జోడించండి",
+      "failed": "చిరునామాలను లోడ్ చేయడం విఫలమైంది. మళ్లీ ప్రయత్నించండి.",
+      "noAddresses": "చిరునామాలు లేవు. కొనసాగించడానికి మీ మొదటి చిరునామాను జోడించండి."
+    },
+    "footer": {
+      "confirm": "ఎంపికను నిర్ధారించు"
+    }
+  },
+  "amount": "మొత్తం",
+  "apply": "వర్తింపజేయి",
+  "brand": {
+    "loading": "బ్రాండ్‌లు లోడ్ అవుతున్నాయి..."
+  },
+  "cancel": "రద్దు",
+  "categories": "వర్గాలు",
+  "category": {
+    "loading": "వర్గాలు లోడ్ అవుతున్నాయి..."
+  },
+  "checkout": {
+    "stores": "స్టోర్లు"
+  },
+  "close": "మూసివేయి",
+  "common": {
+    "cancel": "రద్దు"
+  },
+  "continue": "కొనసాగించు",
+  "delete": "తొలగించు",
+  "delivery": "డెలివరీ",
+  "edit": "సవరించు",
+  "failedItems": {
+    "store": "స్టోర్"
+  },
+  "filters": {
+    "status": "స్థితి"
+  },
+  "footer": {
+    "quick_links": {
+      "stores": "స్టోర్లు"
+    }
+  },
+  "home": {
+    "delivery": {
+      "features": {
+        "tracking": "రియల్-టైమ్ ట్రాకింగ్"
+      }
+    }
+  },
+  "loading": "లోడ్ అవుతోంది...",
+  "nav": {
+    "home": "హోమ్",
+    "products": "ఉత్పత్తులు",
+    "watch": "చూడండి",
+    "watch_and_buy": "చూసి కొనండి"
+  },
+  "no": "కాదు",
+  "order": "ఆర్డర్",
+  "pageTitle": {
+    "cart": "కార్ట్",
+    "categories": "వర్గాలు",
+    "home": "హోమ్",
+    "orders": "ఆర్డర్లు",
+    "products": "ఉత్పత్తులు",
+    "search": "శోధన ఫలితాలు",
+    "stores": "స్టోర్లు",
+    "wallet": "వాలెట్",
+    "play": "ప్లే"
+  },
+  "pages": {
+    "featureSection": {
+      "products": "ఉత్పత్తులు"
+    },
+    "order": {
+      "loading": "ఆర్డర్ వివరాలు లోడ్ అవుతున్నాయి..."
+    },
+    "ordersPage": {
+      "loading": "మీ ఆర్డర్లు లోడ్ అవుతున్నాయి..."
+    },
+    "referAndEarnPage": {
+      "stats": {
+        "pending": "పెండింగ్‌లో"
+      }
+    },
+    "storeProductsPage": {
+      "breadcrumbs": {
+        "store": "స్టోర్",
+        "stores": "స్టోర్లు"
+      },
+      "reels": {
+        "title": "రీల్స్"
+      }
+    },
+    "play": {
+      "storiesTitle": "చూసి కొనండి"
+    }
+  },
+  "payment": "చెల్లింపు",
+  "pending": "పెండింగ్‌లో",
+  "price": "ధర",
+  "product_modal": {
+    "cancel": "రద్దు",
+    "continue": "కొనసాగించు"
+  },
+  "products": "ఉత్పత్తులు",
+  "profile": "ప్రొఫైల్",
+  "profileBtn": {
+    "logout": "లాగ్ అవుట్",
+    "wallet": "వాలెట్"
+  },
+  "quantity": "పరిమాణం:",
+  "register_modal": {
+    "links": {
+      "login": "లాగిన్"
+    }
+  },
+  "remove": "తీసివేయి",
+  "removedItems": {
+    "close": "మూసివేయి",
+    "store": "స్టోర్"
+  },
+  "return": "రిటర్న్",
+  "save": "సేవ్",
+  "schedule": {
+    "confirm": "నిర్ధారించు"
+  },
+  "search": "వెతకండి...",
+  "status": "స్థితి",
+  "statusFilters": {
+    "cancelled": "రద్దు చేయబడింది",
+    "delivered": "డెలివరీ అయింది"
+  },
+  "stories": {
+    "title": "స్టోరీలు"
+  },
+  "reels": {
+    "label": "రీల్స్",
+    "viewer": {
+      "viewProduct": "ఉత్పత్తిని చూడండి"
+    }
+  }
+}
