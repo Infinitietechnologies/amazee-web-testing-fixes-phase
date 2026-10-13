@@ -388,6 +388,9 @@ export const verifyOtp = async (params: {
     return response.data;
   } catch (error) {
     console.error("API error:", error);
+    if (axios.isAxiosError(error) && error.response?.data) {
+      return error.response.data as ApiResponse<userData>;
+    }
     return fallbackApiRes;
   }
 };

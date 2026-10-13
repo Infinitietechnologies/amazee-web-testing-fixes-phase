@@ -58,6 +58,4 @@ next-env.d.ts
 *.pdf
 *.md
 # [2026-09-24 security hardening] local env files hold deploy credentials
-.env
-.env.*
 !.env.example

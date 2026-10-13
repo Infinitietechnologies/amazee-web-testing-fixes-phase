@@ -1,6 +1,38 @@
 import { getCookie } from "@/lib/cookies";
 import { AxiosInstance, AxiosResponse, AxiosError } from "axios";
 import { maintenanceStore } from "@/stores/maintenanceStore";
+import { addToast } from "@heroui/react";
+
+let restrictedAccountLogoutInProgress = false;
+const DEVICE_ID_STORAGE_KEY = "amazee_device_id";
+
+/**
+ * Return one random, non-personal identifier for this browser installation.
+ * The API hashes it before storage and uses the hash only to enforce the
+ * registration-bonus per-device limit.
+ */
+const getDeviceId = (): string => {
+  if (typeof window === "undefined") return "";
+
+  try {
+    const stored = window.localStorage.getItem(DEVICE_ID_STORAGE_KEY);
+    if (stored) return stored;
+
+    const generated =
+      typeof window.crypto?.randomUUID === "function"
+        ? window.crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(36).slice(2)}-${Math.random()
+            .toString(36)
+            .slice(2)}`;
+
+    window.localStorage.setItem(DEVICE_ID_STORAGE_KEY, generated);
+    return generated;
+  } catch {
+    // Storage can be unavailable in strict privacy modes. Keep the request
+    // working; the backend still applies its IP and phone safeguards.
+    return "";
+  }
+};
 
 // Helper function to clean token (remove quotes if present)
 const cleanToken = (token: string): string => {
@@ -31,6 +63,13 @@ export const setupInterceptors = (instance: AxiosInstance): void => {
           if (config.headers) {
             config.headers.set("Authorization", `Bearer ${access_token}`);
           }
+        }
+      }
+
+      if (typeof window !== "undefined" && config.headers) {
+        const deviceId = getDeviceId();
+        if (deviceId) {
+          config.headers.set("X-Device-Id", deviceId);
         }
       }
 
@@ -66,6 +105,42 @@ export const setupInterceptors = (instance: AxiosInstance): void => {
             break;
           case 403:
             console.error("Forbidden access");
+            if (typeof window !== "undefined") {
+              const responseData = error.response.data as {
+                error_code?: string;
+                message?: string;
+              };
+              const restrictedAccountCodes = [
+                "account_suspended",
+                "account_deleted",
+              ];
+              const requestHeaders = error.config?.headers as any;
+              const hadBearerToken = Boolean(
+                requestHeaders?.get?.("Authorization") ||
+                  requestHeaders?.Authorization,
+              );
+
+              if (
+                hadBearerToken &&
+                responseData?.error_code &&
+                restrictedAccountCodes.includes(responseData.error_code) &&
+                !restrictedAccountLogoutInProgress
+              ) {
+                restrictedAccountLogoutInProgress = true;
+                const { handleLogout } = require("@/helpers/auth");
+
+                void handleLogout(false, true).finally(() => {
+                  addToast({
+                    title: "Account access blocked",
+                    description:
+                      responseData.message ||
+                      "Your account is not available. Please contact support.",
+                    color: "danger",
+                  });
+                  restrictedAccountLogoutInProgress = false;
+                });
+              }
+            }
             break;
           case 500:
             console.error("Server error");

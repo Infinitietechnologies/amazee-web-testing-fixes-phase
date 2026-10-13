@@ -3,7 +3,7 @@ import Footer from "@/components/Footer/Footer";
 import FirebaseInitializer from "@/components/Functional/FirebaseInitializer";
 import { Navbar } from "@/components/navbar";
 import { getSpecificSettings, isSSR } from "@/helpers/getters";
-import { getSettings, getVersionCheck } from "@/routes/api";
+import { getSettings, getUserData, getVersionCheck } from "@/routes/api";
 import {
   Settings,
   SystemSettings,
@@ -173,9 +173,19 @@ export default function DefaultLayout({
   }, []);
 
   useEffect(() => {
-    if (store.getState().auth.isLoggedIn) return;
+    const isLoggedIn = store.getState().auth.isLoggedIn;
     const accessToken = getCookie("access_token") as string | undefined;
-    if (accessToken) {
+
+    // Validate the persisted login on every browser refresh. A suspension
+    // revokes the token, so this request receives 401 and the shared Axios
+    // interceptor clears Redux, cookies, cart data, and protected UI state.
+    if (isLoggedIn && accessToken) {
+      void getUserData();
+      return;
+    }
+
+    // Redux and the token cookie must agree. Clear either stale half-session.
+    if (isLoggedIn || accessToken) {
       handleLogout(false, true);
     }
   }, []);

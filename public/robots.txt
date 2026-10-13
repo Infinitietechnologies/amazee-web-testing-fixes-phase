@@ -43,4 +43,4 @@ User-agent: DotBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://amazeenow.com/sitemap.xml
+Sitemap: https://amazee-web-testing.infinitietech.in/sitemap.xml
