@@ -22,7 +22,12 @@ import {
   handleResendOtp,
   handlePhoneLogin,
 } from "@/helpers/auth";
-import { sendOtp, updateUserData, verifyOtp } from "@/routes/api";
+import {
+  checkAccountStatus,
+  sendOtp,
+  updateUserData,
+  verifyOtp,
+} from "@/routes/api";
 import {
   login as ReduxLogin,
   setUserDataRedux,
@@ -130,6 +135,25 @@ export const LoginModal: FC<LoginModalProps> = ({ triggerView = "btn" }) => {
       return;
     }
 
+    // Check the account before invoking Firebase/custom SMS. Restricted
+    // customers must see the backend message immediately and receive no OTP.
+    const accountStatus = await checkAccountStatus({
+      mobile: otpPhoneNumber,
+    });
+    if (!accountStatus.success) {
+      const message =
+        accountStatus.message ||
+        "This account is not available. Please contact support.";
+      setPhoneError(message);
+      addToast({
+        title: "Unable to continue",
+        description: message,
+        color: "danger",
+      });
+      setIsLoading(false);
+      return;
+    }
+
     if (isFirebaseGateway) {
       const firebaseInstance = window.firebaseInstance as
         | FirebaseInstance
@@ -165,9 +189,14 @@ export const LoginModal: FC<LoginModalProps> = ({ triggerView = "btn" }) => {
           setOtpStep("verify");
           setResendIn(OTP_RESEND_SECONDS);
         } else {
-          setPhoneError(
-            response.message || "Failed to send OTP. Please try again.",
-          );
+          const message =
+            response.message || "Failed to send OTP. Please try again.";
+          setPhoneError(message);
+          addToast({
+            title: t("login_modal.errors.verification_failed_title"),
+            description: message,
+            color: "danger",
+          });
         }
       } catch (error) {
         console.error("Custom SMS send OTP error:", error);
@@ -374,6 +403,24 @@ export const LoginModal: FC<LoginModalProps> = ({ triggerView = "btn" }) => {
   const handleResendOtpForLogin = async () => {
     if (resendIn > 0) return;
     setIsResendingOtp(true);
+
+    // Repeat the pre-check in case an admin restricted the account while the
+    // OTP dialog was already open. In that case no replacement code is sent.
+    const accountStatus = await checkAccountStatus({
+      mobile: otpPhoneNumber,
+    });
+    if (!accountStatus.success) {
+      const message =
+        accountStatus.message ||
+        "This account is not available. Please contact support.";
+      addToast({
+        title: "Unable to continue",
+        description: message,
+        color: "danger",
+      });
+      setIsResendingOtp(false);
+      return;
+    }
 
     if (isFirebaseGateway) {
       const firebaseInstance = window.firebaseInstance as

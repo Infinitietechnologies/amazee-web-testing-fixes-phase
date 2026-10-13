@@ -362,6 +362,25 @@ export const phoneLogin = async (params: {
 };
 
 // Custom SMS OTP (auth/send-otp)
+export const checkAccountStatus = async (params: {
+  mobile: string;
+}): Promise<
+  ApiResponse<{ can_continue: boolean }> & { error_code?: string }
+> => {
+  try {
+    const response = await api.post("/auth/check-account-status", params);
+    return response.data;
+  } catch (error) {
+    console.error("API error:", error);
+    if (axios.isAxiosError(error) && error.response?.data) {
+      return error.response.data as ApiResponse<{ can_continue: boolean }> & {
+        error_code?: string;
+      };
+    }
+    return fallbackApiRes;
+  }
+};
+
 export const sendOtp = async (params: {
   mobile: string;
   expires_in?: number;
@@ -371,6 +390,12 @@ export const sendOtp = async (params: {
     return response.data;
   } catch (error) {
     console.error("API error:", error);
+    if (axios.isAxiosError(error) && error.response?.data) {
+      return error.response.data as ApiResponse<{
+        mobile: string;
+        expires_in: number;
+      }>;
+    }
     return fallbackApiRes;
   }
 };
