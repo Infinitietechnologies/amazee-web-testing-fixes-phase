@@ -587,6 +587,8 @@
     "did_not_receive_code": "कोड प्राप्त नहीं हुआ?",
     "resend_code": "कोड पुनः भेजें"
   },
+  "membership_free_delivery": "प्राइम मुफ़्त डिलीवरी",
+  "membership_discount_line": "प्राइम सदस्यता छूट",
   "logout_alert_description": "जहां आपने छोड़ा था वहां से जारी रखने के लिए आपको फिर से साइन इन करना होगा।",
   "logout_alert_title": "आप साइन आउट करने वाले हैं",
   "logout_confirm": "साइन आउट करें",

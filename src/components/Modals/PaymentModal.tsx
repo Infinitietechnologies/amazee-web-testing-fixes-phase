@@ -41,6 +41,12 @@ const PaymentModal: FC<PaymentModalProps> = ({ open, onOpenChange }) => {
   const paymentSummary = useSelector(
     (state: RootState) => state.cart.cartData?.payment_summary
   );
+  const membershipDeliveryDiscount = Number(
+    paymentSummary?.membership_delivery_discount || 0
+  );
+  const hasMembershipFreeDelivery =
+    Boolean(paymentSummary?.membership_free_delivery) &&
+    membershipDeliveryDiscount > 0;
 
   // Tips can't be collected in cash, so a tipped cart can't check out COD.
   const hasRiderTip = Number(paymentSummary?.rider_tip_amount || 0) > 0;
@@ -162,15 +168,28 @@ const PaymentModal: FC<PaymentModalProps> = ({ open, onOpenChange }) => {
                 </div>
 
                 {/* Delivery Charges */}
-                {Number(paymentSummary.total_delivery_charges || 0) > 0 && (
+                {(Number(paymentSummary.total_delivery_charges || 0) > 0 ||
+                  hasMembershipFreeDelivery) && (
                   <div className="flex justify-between">
                     <span className="opacity-80">
                       {t("checkout.deliveryCharges")}
                     </span>
-                    <span>
-                      {currencySymbol}
-                      {formatAmount(paymentSummary.total_delivery_charges)}
-                    </span>
+                    {hasMembershipFreeDelivery ? (
+                      <span className="flex items-center gap-2">
+                        <span className="line-through opacity-60">
+                          {currencySymbol}
+                          {formatAmount(membershipDeliveryDiscount)}
+                        </span>
+                        <span className="text-green-700 dark:text-green-400 font-semibold">
+                          {t("membership_free_delivery")}
+                        </span>
+                      </span>
+                    ) : (
+                      <span>
+                        {currencySymbol}
+                        {formatAmount(paymentSummary.total_delivery_charges)}
+                      </span>
+                    )}
                   </div>
                 )}
 
@@ -213,6 +232,16 @@ const PaymentModal: FC<PaymentModalProps> = ({ open, onOpenChange }) => {
                     <span>
                       {currencySymbol}
                       {formatAmount(Number(paymentSummary.membership_fee))}
+                    </span>
+                  </div>
+                )}
+
+                {Number(paymentSummary.membership_discount || 0) > 0 && (
+                  <div className="flex justify-between text-green-700 dark:text-green-400 font-medium">
+                    <span>{t("membership_discount_line")}</span>
+                    <span>
+                      -{currencySymbol}
+                      {formatAmount(Number(paymentSummary.membership_discount))}
                     </span>
                   </div>
                 )}

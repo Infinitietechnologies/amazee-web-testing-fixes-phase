@@ -47,6 +47,12 @@ const CheckoutSection: FC<CheckoutSectionProps> = ({ cart }) => {
   const router = useRouter();
   const { currencySymbol, systemSettings, isSingleVendor } = useSettings();
   const { payment_summary, items, total_quantity } = cart;
+  const membershipDeliveryDiscount = Number(
+    payment_summary.membership_delivery_discount || 0,
+  );
+  const hasMembershipFreeDelivery =
+    Boolean(payment_summary.membership_free_delivery) &&
+    membershipDeliveryDiscount > 0;
   const selectedAddress = useSelector(
     (state: RootState) => state.checkout.selectedAddress,
   );
@@ -352,7 +358,17 @@ const CheckoutSection: FC<CheckoutSectionProps> = ({ cart }) => {
             <div className="flex justify-between">
               <span>{t("checkout.deliveryCharges")}</span>
 
-              {isFreeShipping && isInstantPromo ? (
+              {hasMembershipFreeDelivery ? (
+                <span className="flex items-center gap-2">
+                  <span className="line-through text-gray-500">
+                    {currencySymbol}
+                    {formatAmount(membershipDeliveryDiscount)}
+                  </span>
+                  <span className="text-green-600 font-semibold">
+                    {t("membership_free_delivery")}
+                  </span>
+                </span>
+              ) : isFreeShipping && isInstantPromo ? (
                 <span className="flex items-center gap-2">
                   {/* Strikethrough original amount */}
                   <span className="line-through text-gray-500">
@@ -429,6 +445,16 @@ const CheckoutSection: FC<CheckoutSectionProps> = ({ cart }) => {
                 <span>
                   {currencySymbol}
                   {formatAmount(Number(payment_summary.membership_fee))}
+                </span>
+              </div>
+            )}
+
+            {Number(payment_summary.membership_discount || 0) > 0 && (
+              <div className="flex justify-between text-green-700 dark:text-green-400 font-medium">
+                <span>{t("membership_discount_line")}</span>
+                <span>
+                  -{currencySymbol}
+                  {formatAmount(Number(payment_summary.membership_discount))}
                 </span>
               </div>
             )}

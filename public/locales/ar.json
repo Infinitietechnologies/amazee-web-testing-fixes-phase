@@ -578,6 +578,8 @@
     "did_not_receive_code": "لم تستلم الرمز؟",
     "resend_code": "إعادة إرسال الرمز"
   },
+  "membership_free_delivery": "توصيل مجاني مع برايم",
+  "membership_discount_line": "خصم عضوية برايم",
   "logout_alert_description": "ستحتاج إلى تسجيل الدخول للمتابعة من حيث توقفت.",
   "logout_alert_title": "أنت على وشك تسجيل الخروج",
   "logout_confirm": "تسجيل الخروج",

@@ -37,6 +37,11 @@ const OrderSummary: FC<OrderSummaryProps> = ({ order, currencySymbol }) => {
   // Calculate wallet amount used
   const walletAmountUsed = Math.max(0, Number(order.wallet_balance || 0));
   const hasWalletUsed = walletAmountUsed > 0;
+  const membershipDeliveryDiscount = Number(
+    order.membership_delivery_discount || 0,
+  );
+  const hasMembershipFreeDelivery =
+    Boolean(order.membership_free_delivery) && membershipDeliveryDiscount > 0;
 
   return (
     <Card shadow="sm" radius="lg" className="w-full">
@@ -68,9 +73,20 @@ const OrderSummary: FC<OrderSummaryProps> = ({ order, currencySymbol }) => {
             <span className="text-sm text-gray-600 dark:text-gray-400">
               {t("deliveryCharge")}
             </span>
-            <span className="text-sm text-gray-900 dark:text-gray-100">
-              {formatCurrency(order.delivery_charge.toString())}
-            </span>
+            {hasMembershipFreeDelivery ? (
+              <span className="flex items-center gap-2 text-sm">
+                <span className="line-through text-gray-500">
+                  {formatCurrency(membershipDeliveryDiscount.toString())}
+                </span>
+                <span className="text-green-600 font-semibold">
+                  {t("membership_free_delivery")}
+                </span>
+              </span>
+            ) : (
+              <span className="text-sm text-gray-900 dark:text-gray-100">
+                {formatCurrency(order.delivery_charge.toString())}
+              </span>
+            )}
           </div>
 
           {Number(order.handling_charges || 0) > 0 && (
@@ -112,6 +128,15 @@ const OrderSummary: FC<OrderSummaryProps> = ({ order, currencySymbol }) => {
               </span>
               <span className="text-sm text-gray-900 dark:text-gray-100">
                 {formatCurrency(String(order.membership_fee))}
+              </span>
+            </div>
+          )}
+
+          {Number(order.membership_discount || 0) > 0 && (
+            <div className="flex justify-between items-center text-green-700 dark:text-green-400">
+              <span className="text-sm">{t("membership_discount_line")}</span>
+              <span className="text-sm font-medium">
+                -{formatCurrency(String(order.membership_discount))}
               </span>
             </div>
           )}

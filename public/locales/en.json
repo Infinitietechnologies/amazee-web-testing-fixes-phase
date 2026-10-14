@@ -648,6 +648,8 @@
     "order": "Order {{id}}"
   },
   "membership_fee_line": "Basic Membership {{plan}}",
+  "membership_free_delivery": "Prime Free Delivery",
+  "membership_discount_line": "Prime Membership Discount",
   "logout_alert_description": "You'll need to sign in to continue where you left off.",
   "logout_alert_title": "You're about to sign out",
   "logout_confirm": "Sign Out",

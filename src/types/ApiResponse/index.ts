@@ -19,6 +19,7 @@ export interface MembershipPlan {
   discount: number | null;
   minimum_order_amount: number | null;
   maximum_discount_amount: number | null;
+  allow_buy_now?: boolean;
   status: boolean;
 }
 
@@ -890,6 +891,8 @@ export interface Order {
 
   // [AmazeeNow] Not in upstream V3 — kept through the merge.
   membership_discount?: number | string | null;
+  membership_free_delivery?: boolean;
+  membership_delivery_discount?: number | string | null;
   refundable_amount?: number | string | null;
   remaining_total_payable?: number | string | null;
 }
@@ -1636,6 +1639,10 @@ export interface PaymentSummary {
 
   // [AmazeeNow] Not in upstream V3 — kept through the merge.
   membership_discount?: number | string | null;
+  /** True when the active Prime membership waived delivery for this cart. */
+  membership_free_delivery?: boolean;
+  /** Server-calculated delivery amount waived by Prime. */
+  membership_delivery_discount?: number | string | null;
 }
 
 /** Loyalty redemption context the cart endpoint returns per request. */
